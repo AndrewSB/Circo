@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import AVFoundation
 
-class ViewController: UIViewController {
+class MainMenuViewController: UIViewController {
                             
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //Create the background transparent view thing
+        
+        
+    }
+    
+    func checkDeviceAuthorizationStatus() {
+        var mediaType = AVMediaTypeVideo
+        
+        AVCaptureDevice.requestAccessForMediaType(mediaType, completionHandler:{bool -> Void in
+            //do code
+            })
     }
 
     override func didReceiveMemoryWarning() {
