@@ -24,6 +24,20 @@
 			remoteGlobalIDString = 463467A8198707D90018A419;
 			remoteInfo = Circo;
 		};
+		46CA914E1988C78C009964EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 463467A1198707D90018A419 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 463467A8198707D90018A419;
+			remoteInfo = Circo;
+		};
+		46CA91501988C78C009964EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 463467A1198707D90018A419 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 463467A8198707D90018A419;
+			remoteInfo = Circo;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -162,6 +176,8 @@
 			);
 			dependencies = (
 				463467BD198707D90018A419 /* PBXTargetDependency */,
+				46CA914F1988C78C009964EE /* PBXTargetDependency */,
+				46CA91511988C78C009964EE /* PBXTargetDependency */,
 			);
 			name = CircoTests;
 			productName = CircoTests;
@@ -284,6 +300,16 @@
 			target = 463467A8198707D90018A419 /* Circo */;
 			targetProxy = 463467BC198707D90018A419 /* PBXContainerItemProxy */;
 		};
+		46CA914F1988C78C009964EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 463467A8198707D90018A419 /* Circo */;
+			targetProxy = 46CA914E1988C78C009964EE /* PBXContainerItemProxy */;
+		};
+		46CA91511988C78C009964EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 463467A8198707D90018A419 /* Circo */;
+			targetProxy = 46CA91501988C78C009964EE /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -335,7 +361,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos8.0;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -370,7 +396,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				METAL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos8.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

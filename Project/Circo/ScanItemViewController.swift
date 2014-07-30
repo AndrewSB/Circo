@@ -11,11 +11,16 @@ import AVFoundation
 
 class ScanItemViewController: UIViewController,UIAlertViewDelegate,UITableViewDelegate, UITableViewDataSource, ZBarReaderViewDelegate,UIImagePickerControllerDelegate, AVCaptureMetadataOutputObjectsDelegate {
     
+    
+    //DECLARATIONS:
+    
     var device: AVCaptureDevice?
     var input: AVCaptureDeviceInput?
     var output: AVCaptureMetadataOutput!
     var session: AVCaptureSession!
     var preview: AVCaptureVideoPreviewLayer!
+    
+    @IBOutlet weak var previewLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,9 +120,18 @@ class ScanItemViewController: UIViewController,UIAlertViewDelegate,UITableViewDe
             let metadataObject: AVMetadataMachineReadableCodeObject = metadataObjects[0] as AVMetadataMachineReadableCodeObject
             println(metadataObject.stringValue)
             
+            /*
+                App has recognized a barcode/ qrcode
+                Have deterministic logic that stratifies the result into a parsable barcode int or a string webadress to be opened in a UIWebView
+            */
+            
+            
+            
         }
         
     }
+    
+    
     
     func requestCameraAccess() {
         AVCaptureDevice.requestAccessForMediaType(AVMediaTypeVideo, completionHandler: {(granted: Bool!) in
@@ -129,6 +143,14 @@ class ScanItemViewController: UIViewController,UIAlertViewDelegate,UITableViewDe
             return true
         } else {
             return false
+        }
+    }
+    
+    func websiteOrBarcode(input: String) -> (String?, Int?) {
+        if let a = input.toInt() {
+            return (nil,a)
+        } else {
+            return (input, nil)
         }
     }
 }
