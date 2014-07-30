@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C9D8F58BD30492C81BBCF0C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3892223C38FD4F87B2559965 /* libPods.a */; };
 		463467AF198707D90018A419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463467AE198707D90018A419 /* AppDelegate.swift */; };
 		463467B1198707D90018A419 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463467B0198707D90018A419 /* MainMenuViewController.swift */; };
 		463467B4198707D90018A419 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 463467B2198707D90018A419 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3892223C38FD4F87B2559965 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		463467A9198707D90018A419 /* Circo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		463467AD198707D90018A419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		463467AE198707D90018A419 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		463467C0198707D90018A419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		463467C1198707D90018A419 /* CircoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircoTests.swift; sourceTree = "<group>"; };
 		46664E441988820600C34462 /* ScanItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanItemViewController.swift; sourceTree = "<group>"; };
+		46B9974B1988BA4100854E2C /* Circo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Circo-Bridging-Header.h"; sourceTree = "<group>"; };
+		E89A497C551A44D0BEF5C431 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C9D8F58BD30492C81BBCF0C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +61,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19AB7F0F21C24B0983AA5212 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3892223C38FD4F87B2559965 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		463467A0198707D90018A419 = {
 			isa = PBXGroup;
 			children = (
 				463467AB198707D90018A419 /* Circo */,
 				463467BE198707D90018A419 /* CircoTests */,
 				463467AA198707D90018A419 /* Products */,
+				E89A497C551A44D0BEF5C431 /* Pods.xcconfig */,
+				19AB7F0F21C24B0983AA5212 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +98,7 @@
 				463467B2198707D90018A419 /* Main.storyboard */,
 				463467B5198707D90018A419 /* Images.xcassets */,
 				463467AC198707D90018A419 /* Supporting Files */,
+				46B9974B1988BA4100854E2C /* Circo-Bridging-Header.h */,
 			);
 			path = Circo;
 			sourceTree = "<group>";
@@ -119,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 463467C5198707D90018A419 /* Build configuration list for PBXNativeTarget "Circo" */;
 			buildPhases = (
+				3D4FB7A4A8754007B593A3A0 /* Check Pods Manifest.lock */,
 				463467A5198707D90018A419 /* Sources */,
 				463467A6198707D90018A419 /* Frameworks */,
 				463467A7198707D90018A419 /* Resources */,
+				097EE979E4374DE99DE7D624 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,6 +223,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		097EE979E4374DE99DE7D624 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D4FB7A4A8754007B593A3A0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		463467A5198707D90018A419 /* Sources */ = {
@@ -326,25 +377,32 @@
 		};
 		463467C6198707D90018A419 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E89A497C551A44D0BEF5C431 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Circo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Circo/Circo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		463467C7198707D90018A419 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E89A497C551A44D0BEF5C431 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Circo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Circo/Circo-Bridging-Header.h";
 			};
 			name = Release;
 		};
