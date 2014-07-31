@@ -153,5 +153,5 @@ class ScanItemViewController: UIViewController,UIAlertViewDelegate,UITableViewDe
             return (input, nil)
         }
     }
-}
+} //Bank of America Account Got Six Figures
 
