@@ -20,6 +20,8 @@ class CircoView: UIView {
             backgroundRingLayer = CAShapeLayer()
             layer.addSublayer(backgroundRingLayer);
         }
+        
+        backgroundRingLayer.frame = layer.bounds
     }
 
 }

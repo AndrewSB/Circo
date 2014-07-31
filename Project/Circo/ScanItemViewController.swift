@@ -12,7 +12,7 @@ import AVFoundation
 class ScanItemViewController: UIViewController,UIAlertViewDelegate,UITableViewDelegate, UITableViewDataSource, ZBarReaderViewDelegate,UIImagePickerControllerDelegate, AVCaptureMetadataOutputObjectsDelegate {
     
     
-    //DECLARATIONS:
+    // DECLARATIONS:
     
     var device: AVCaptureDevice?
     var input: AVCaptureDeviceInput?
@@ -20,7 +20,32 @@ class ScanItemViewController: UIViewController,UIAlertViewDelegate,UITableViewDe
     var session: AVCaptureSession!
     var preview: AVCaptureVideoPreviewLayer!
     
+    let rootVC: UIViewController! = UIApplication.sharedApplication().keyWindow.rootViewController
+    
+    
     @IBOutlet weak var previewLabel: UILabel!
+    
+    func requestCameraAccess() {
+        AVCaptureDevice.requestAccessForMediaType(AVMediaTypeVideo, completionHandler: {(granted: Bool!) in})
+    }
+    
+    func isCameraAllowed() -> Bool {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func isNotWebsite(input: String) -> Bool {
+        let clean = input.stringByReplacingOccurrencesOfString(" ", withString: "")
+        if let nums = clean.toInt() {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +89,7 @@ class ScanItemViewController: UIViewController,UIAlertViewDelegate,UITableViewDe
             session.startRunning()
             
             
-        }else {
+        } else {
             if self.isCameraAllowed() {
                 var readView:ZBarReaderView = ZBarReaderView()
                 readView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
@@ -78,7 +103,7 @@ class ScanItemViewController: UIViewController,UIAlertViewDelegate,UITableViewDe
                 readView.start()
             }
             else{
-                println("No user carme !!")
+                println("No user camera. FML")
             }
         }
     }
@@ -113,7 +138,6 @@ class ScanItemViewController: UIViewController,UIAlertViewDelegate,UITableViewDe
         
     }
     
-    
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!)
     {
         if metadataObjects.count > 0 {
@@ -124,34 +148,21 @@ class ScanItemViewController: UIViewController,UIAlertViewDelegate,UITableViewDe
                 App has recognized a barcode/ qrcode
                 Have deterministic logic that stratifies the result into a parsable barcode int or a string webadress to be opened in a UIWebView
             */
-            
-            
-            
-        }
-        
-    }
-    
-    
-    
-    func requestCameraAccess() {
-        AVCaptureDevice.requestAccessForMediaType(AVMediaTypeVideo, completionHandler: {(granted: Bool!) in
-            })
-    }
-    
-    func isCameraAllowed() -> Bool {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
-            return true
-        } else {
-            return false
-        }
-    }
-    
-    func websiteOrBarcode(input: String) -> (String?, Int?) {
-        if let a = input.toInt() {
-            return (nil,a)
-        } else {
-            return (input, nil)
-        }
-    }
-} //Bank of America Account Got Six Figures
+            session.stopRunning()
 
+            if self.isNotWebsite(metadataObject.stringValue) {
+                // Do Barcode shit: Google product lookup
+                
+                    
+            } else {
+                // It's a website. Present the UIWebView
+                let scannedURL: NSURL! = NSURL(string: metadataObject.stringValue)
+                var websiteToBeOpened: UIWebView! = UIWebView(frame: self.view.frame)
+                websiteToBeOpened.loadRequest(NSURLRequest(URL: scannedURL))
+            
+                self.view.addSubview(websiteToBeOpened)
+            }
+        }
+    }
+    
+}
