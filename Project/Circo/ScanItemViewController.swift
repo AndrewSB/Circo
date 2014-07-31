@@ -13,14 +13,14 @@ class ScanItemViewController: UIViewController,UIAlertViewDelegate,UITableViewDe
     
     
     // DECLARATIONS:
-    
     var device: AVCaptureDevice?
     var input: AVCaptureDeviceInput?
     var output: AVCaptureMetadataOutput!
     var session: AVCaptureSession!
     var preview: AVCaptureVideoPreviewLayer!
     
-    let rootVC: UIViewController! = UIApplication.sharedApplication().keyWindow.rootViewController
+    let rootVC = UIApplication.sharedApplication().keyWindow.rootViewController
+    let webSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
     
     
     @IBOutlet weak var previewLabel: UILabel!
@@ -152,8 +152,12 @@ class ScanItemViewController: UIViewController,UIAlertViewDelegate,UITableViewDe
 
             if self.isNotWebsite(metadataObject.stringValue) {
                 // Do Barcode shit: Google product lookup
+                let upcRequest: NSURLRequest! = NSURLRequest(URL: NSURL(string: "http://www.upcdatabase.org/api/json/d47495642168ecc32401382b8feccaa4/\(metadataObject.stringValue)"))
                 
-                    
+                webSession.dataTaskWithRequest(upcRequest, completionHandler: {(data, response, error) in
+                    println(data)
+                    });
+                
             } else {
                 // It's a website. Present the UIWebView
                 let scannedURL: NSURL! = NSURL(string: metadataObject.stringValue)
