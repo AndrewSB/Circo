@@ -4,5 +4,3 @@
 
 #import "ZBarSDK.h"
 #import "ZBarReaderView.h"
-
-#import "Parse/Headers/Parse.h"
