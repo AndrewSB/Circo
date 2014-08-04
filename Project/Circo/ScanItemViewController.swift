@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ScanItemViewController: UIViewController, UIAlertViewDelegate, UITableViewDelegate, UITableViewDataSource, ZBarReaderViewDelegate, UIImagePickerControllerDelegate, AVCaptureMetadataOutputObjectsDelegate {
+class ScanItemViewController: UIViewController,UIAlertViewDelegate,UITableViewDelegate, UITableViewDataSource, ZBarReaderViewDelegate,UIImagePickerControllerDelegate, AVCaptureMetadataOutputObjectsDelegate {
     
     
     // DECLARATIONS:
