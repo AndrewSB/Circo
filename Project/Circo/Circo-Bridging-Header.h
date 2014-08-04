@@ -4,3 +4,5 @@
 
 #import "ZBarSDK.h"
 #import "ZBarReaderView.h"
+
+#import "Parse/Parse.h"
