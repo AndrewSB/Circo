@@ -19,8 +19,11 @@ class CircoView: UIView {
         if !backgroundRingLayer {
             backgroundRingLayer = CAShapeLayer()
             layer.addSublayer(backgroundRingLayer);
+            
+            let rect = bounds
+            let path = UIBezierPath(ovalInRect: rect)
+            
         }
-        
         backgroundRingLayer.frame = layer.bounds
     }
 
