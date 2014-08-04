@@ -14,6 +14,17 @@
 		463467B6198707D90018A419 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 463467B5198707D90018A419 /* Images.xcassets */; };
 		463467C2198707D90018A419 /* CircoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463467C1198707D90018A419 /* CircoTests.swift */; };
 		46664E451988820600C34462 /* ScanItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46664E441988820600C34462 /* ScanItemViewController.swift */; };
+		46E7F3A8198F55B000EFCF68 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E7F392198F559600EFCF68 /* AudioToolbox.framework */; };
+		46E7F3A9198F55B000EFCF68 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E7F393198F559600EFCF68 /* CFNetwork.framework */; };
+		46E7F3AA198F55B000EFCF68 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E7F394198F559600EFCF68 /* CoreGraphics.framework */; };
+		46E7F3AB198F55B000EFCF68 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E7F395198F559600EFCF68 /* CoreLocation.framework */; };
+		46E7F3AC198F55B000EFCF68 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E7F396198F559600EFCF68 /* libz.dylib */; };
+		46E7F3AD198F55B000EFCF68 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E7F397198F559600EFCF68 /* MobileCoreServices.framework */; };
+		46E7F3AE198F55B000EFCF68 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E7F398198F559600EFCF68 /* Parse.framework */; };
+		46E7F3AF198F55B000EFCF68 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E7F399198F559600EFCF68 /* QuartzCore.framework */; };
+		46E7F3B0198F55B000EFCF68 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E7F39A198F559600EFCF68 /* Security.framework */; };
+		46E7F3B1198F55B000EFCF68 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E7F39B198F559600EFCF68 /* StoreKit.framework */; };
+		46E7F3B2198F55B000EFCF68 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E7F39C198F559600EFCF68 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,17 +77,17 @@
 		463467C1198707D90018A419 /* CircoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircoTests.swift; sourceTree = "<group>"; };
 		46664E441988820600C34462 /* ScanItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanItemViewController.swift; sourceTree = "<group>"; };
 		46B9974B1988BA4100854E2C /* Circo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Circo-Bridging-Header.h"; sourceTree = "<group>"; };
-		46E7F37C198F54F500EFCF68 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = ../../../../.Trash/AudioToolbox.framework; sourceTree = "<group>"; };
-		46E7F37D198F54F500EFCF68 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = ../../../../.Trash/CFNetwork.framework; sourceTree = "<group>"; };
-		46E7F37E198F54F500EFCF68 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = ../../../../.Trash/CoreGraphics.framework; sourceTree = "<group>"; };
-		46E7F37F198F54F500EFCF68 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = ../../../../.Trash/CoreLocation.framework; sourceTree = "<group>"; };
-		46E7F380198F54F500EFCF68 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = ../../../../.Trash/libz.dylib; sourceTree = "<group>"; };
-		46E7F381198F54F500EFCF68 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = ../../../../.Trash/MobileCoreServices.framework; sourceTree = "<group>"; };
-		46E7F382198F54F500EFCF68 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../../../.Trash/Parse.framework; sourceTree = "<group>"; };
-		46E7F383198F54F500EFCF68 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = ../../../../.Trash/QuartzCore.framework; sourceTree = "<group>"; };
-		46E7F384198F54F500EFCF68 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = ../../../../.Trash/Security.framework; sourceTree = "<group>"; };
-		46E7F385198F54F500EFCF68 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = ../../../../.Trash/StoreKit.framework; sourceTree = "<group>"; };
-		46E7F386198F54F500EFCF68 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = ../../../../.Trash/SystemConfiguration.framework; sourceTree = "<group>"; };
+		46E7F392198F559600EFCF68 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioToolbox.framework; sourceTree = "<group>"; };
+		46E7F393198F559600EFCF68 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CFNetwork.framework; sourceTree = "<group>"; };
+		46E7F394198F559600EFCF68 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreGraphics.framework; sourceTree = "<group>"; };
+		46E7F395198F559600EFCF68 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreLocation.framework; sourceTree = "<group>"; };
+		46E7F396198F559600EFCF68 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libz.dylib; sourceTree = "<group>"; };
+		46E7F397198F559600EFCF68 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileCoreServices.framework; sourceTree = "<group>"; };
+		46E7F398198F559600EFCF68 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		46E7F399198F559600EFCF68 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QuartzCore.framework; sourceTree = "<group>"; };
+		46E7F39A198F559600EFCF68 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Security.framework; sourceTree = "<group>"; };
+		46E7F39B198F559600EFCF68 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StoreKit.framework; sourceTree = "<group>"; };
+		46E7F39C198F559600EFCF68 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SystemConfiguration.framework; sourceTree = "<group>"; };
 		46EFDD3D198988EE003B93DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46EFDD3E198988EE003B93DA /* CircoKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircoKit.h; sourceTree = "<group>"; };
 		46EFDD4A198988EE003B93DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +102,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C9D8F58BD30492C81BBCF0C /* libPods.a in Frameworks */,
+				46E7F3A8198F55B000EFCF68 /* AudioToolbox.framework in Frameworks */,
+				46E7F3A9198F55B000EFCF68 /* CFNetwork.framework in Frameworks */,
+				46E7F3AA198F55B000EFCF68 /* CoreGraphics.framework in Frameworks */,
+				46E7F3AB198F55B000EFCF68 /* CoreLocation.framework in Frameworks */,
+				46E7F3AC198F55B000EFCF68 /* libz.dylib in Frameworks */,
+				46E7F3AD198F55B000EFCF68 /* MobileCoreServices.framework in Frameworks */,
+				46E7F3AE198F55B000EFCF68 /* Parse.framework in Frameworks */,
+				46E7F3AF198F55B000EFCF68 /* QuartzCore.framework in Frameworks */,
+				46E7F3B0198F55B000EFCF68 /* Security.framework in Frameworks */,
+				46E7F3B1198F55B000EFCF68 /* StoreKit.framework in Frameworks */,
+				46E7F3B2198F55B000EFCF68 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,17 +129,17 @@
 		19AB7F0F21C24B0983AA5212 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				46E7F37C198F54F500EFCF68 /* AudioToolbox.framework */,
-				46E7F37D198F54F500EFCF68 /* CFNetwork.framework */,
-				46E7F37E198F54F500EFCF68 /* CoreGraphics.framework */,
-				46E7F37F198F54F500EFCF68 /* CoreLocation.framework */,
-				46E7F380198F54F500EFCF68 /* libz.dylib */,
-				46E7F381198F54F500EFCF68 /* MobileCoreServices.framework */,
-				46E7F382198F54F500EFCF68 /* Parse.framework */,
-				46E7F383198F54F500EFCF68 /* QuartzCore.framework */,
-				46E7F384198F54F500EFCF68 /* Security.framework */,
-				46E7F385198F54F500EFCF68 /* StoreKit.framework */,
-				46E7F386198F54F500EFCF68 /* SystemConfiguration.framework */,
+				46E7F392198F559600EFCF68 /* AudioToolbox.framework */,
+				46E7F393198F559600EFCF68 /* CFNetwork.framework */,
+				46E7F394198F559600EFCF68 /* CoreGraphics.framework */,
+				46E7F395198F559600EFCF68 /* CoreLocation.framework */,
+				46E7F396198F559600EFCF68 /* libz.dylib */,
+				46E7F397198F559600EFCF68 /* MobileCoreServices.framework */,
+				46E7F398198F559600EFCF68 /* Parse.framework */,
+				46E7F399198F559600EFCF68 /* QuartzCore.framework */,
+				46E7F39A198F559600EFCF68 /* Security.framework */,
+				46E7F39B198F559600EFCF68 /* StoreKit.framework */,
+				46E7F39C198F559600EFCF68 /* SystemConfiguration.framework */,
 				3892223C38FD4F87B2559965 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -495,6 +517,10 @@
 				INFOPLIST_FILE = Circo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Circo/Circo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -516,6 +542,10 @@
 				INFOPLIST_FILE = Circo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Circo/Circo-Bridging-Header.h";
 			};

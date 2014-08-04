@@ -5,3 +5,4 @@
 #import "ZBarSDK.h"
 #import "ZBarReaderView.h"
 
+#import "Parse/Headers/Parse.h"/Users/asb/.Trash/Parse.framework/Headers/Parse.h
