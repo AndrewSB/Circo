@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  MainMenuViewController.swift
 //  Circo
 //
-//  Created by Andrew Breckenridge on 7/28/14.
+//  Created by Andrew Breckenridge on 8/4/14.
 //  Copyright (c) 2014 asb. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 class MainMenuViewController: UIViewController {
-                            
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,14 +24,13 @@ class MainMenuViewController: UIViewController {
         
         AVCaptureDevice.requestAccessForMediaType(mediaType, completionHandler:{bool -> Void in
             //do code
-            })
+        })
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
-

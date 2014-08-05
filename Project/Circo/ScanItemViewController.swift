@@ -2,7 +2,7 @@
 //  ScanItemViewController.swift
 //  Circo
 //
-//  Created by Andrew Breckenridge on 7/29/14.
+//  Created by Andrew Breckenridge on 8/5/14.
 //  Copyright (c) 2014 asb. All rights reserved.
 //
 
@@ -145,25 +145,25 @@ class ScanItemViewController: UIViewController,UIAlertViewDelegate,UITableViewDe
             println(metadataObject.stringValue)
             
             /*
-                App has recognized a barcode/ qrcode
-                Have deterministic logic that stratifies the result into a parsable barcode int or a string webadress to be opened in a UIWebView
+            App has recognized a barcode/ qrcode
+            Have deterministic logic that stratifies the result into a parsable barcode int or a string webadress to be opened in a UIWebView
             */
             session.stopRunning()
-
+            
             if self.isNotWebsite(metadataObject.stringValue) {
                 // Do Barcode shit: Google product lookup
                 let upcRequest: NSURLRequest! = NSURLRequest(URL: NSURL(string: "http://www.upcdatabase.org/api/json/d47495642168ecc32401382b8feccaa4/\(metadataObject.stringValue)"))
                 
                 webSession.dataTaskWithRequest(upcRequest, completionHandler: {(data, response, error) in
                     println(data)
-                    });
+                });
                 
             } else {
                 // It's a website. Present the UIWebView
                 let scannedURL: NSURL! = NSURL(string: metadataObject.stringValue)
                 var websiteToBeOpened: UIWebView! = UIWebView(frame: self.view.frame)
                 websiteToBeOpened.loadRequest(NSURLRequest(URL: scannedURL))
-            
+                
                 self.view.addSubview(websiteToBeOpened)
             }
         }

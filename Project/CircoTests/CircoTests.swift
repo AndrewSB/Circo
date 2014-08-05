@@ -2,10 +2,11 @@
 //  CircoTests.swift
 //  CircoTests
 //
-//  Created by Andrew Breckenridge on 7/28/14.
+//  Created by Andrew Breckenridge on 8/4/14.
 //  Copyright (c) 2014 asb. All rights reserved.
 //
 
+import UIKit
 import XCTest
 
 class CircoTests: XCTestCase {
