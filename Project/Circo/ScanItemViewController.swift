@@ -38,12 +38,17 @@ class ScanItemViewController: UIViewController,UIAlertViewDelegate,UITableViewDe
     }
     
     func isNotWebsite(input: String) -> Bool {
-        let clean = input.stringByReplacingOccurrencesOfString(" ", withString: "")
-        if let nums = clean.toInt() {
-            return true
-        } else {
-            return false
+        let clean: String = input.stringByReplacingOccurrencesOfString(" ", withString: "")
+        
+        let letters = NSCharacterSet.letterCharacterSet()
+        let digits = NSCharacterSet.decimalDigitCharacterSet()
+        
+        for character in clean.unicodeScalars {
+            if letters.longCharacterIsMember(character.value) {
+                return false
+            }
         }
+        return true
     }
     
     
@@ -151,14 +156,20 @@ class ScanItemViewController: UIViewController,UIAlertViewDelegate,UITableViewDe
             session.stopRunning()
             
             if self.isNotWebsite(metadataObject.stringValue) {
+                println("isnotwebsite")
+            } else {
+                println("iswebsite")
+            }
+            
+            
+            if self.isNotWebsite(metadataObject.stringValue) {
                 // Do Barcode shit: Google product lookup
                 
+                println("got barcode: \(metadataObject.stringValue)")
                 
-                Alamofire.request(.GET, "http://www.upcdatabase.org/api/json/d47495642168ecc32401382b8feccaa4/\(metadataObject.stringValue)")
-                    .response { (request, response, data, error) in
-                        println(request)
-                        println(response)
-                        println(error)
+                Alamofire.request(.GET, "http://api.upcdatabase.org/json/d47495642168ecc32401382b8feccaa4/\(metadataObject.stringValue)")
+                        .responseString { (request, response, string, error) in
+                        println(string)
                 }
 
                 

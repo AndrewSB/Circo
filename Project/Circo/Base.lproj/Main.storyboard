@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="224" y="410"/>
         </scene>
-        <!--View Controller-->
+        <!--Scan Item View Controller-->
         <scene sceneID="UKM-lS-QYX">
             <objects>
-                <viewController id="UAP-Ad-fkh" sceneMemberID="viewController">
+                <viewController id="UAP-Ad-fkh" customClass="ScanItemViewController" customModule="Circo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="czK-8c-2pW"/>
                         <viewControllerLayoutGuide type="bottom" id="JCL-uX-QKf"/>
