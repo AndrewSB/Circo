@@ -152,11 +152,15 @@ class ScanItemViewController: UIViewController,UIAlertViewDelegate,UITableViewDe
             
             if self.isNotWebsite(metadataObject.stringValue) {
                 // Do Barcode shit: Google product lookup
-                let upcRequest: NSURLRequest! = NSURLRequest(URL: NSURL(string: "http://www.upcdatabase.org/api/json/d47495642168ecc32401382b8feccaa4/\(metadataObject.stringValue)"))
                 
-                webSession.dataTaskWithRequest(upcRequest, completionHandler: {(data, response, error) in
-                    println(data)
-                });
+                
+                Alamofire.request(.GET, "http://www.upcdatabase.org/api/json/d47495642168ecc32401382b8feccaa4/\(metadataObject.stringValue)")
+                    .response { (request, response, data, error) in
+                        println(request)
+                        println(response)
+                        println(error)
+                }
+
                 
             } else {
                 // It's a website. Present the UIWebView

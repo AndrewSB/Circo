@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4655BEDD1990B564003D6682 /* ScanItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655BEDC1990B564003D6682 /* ScanItemViewController.swift */; };
+		4683BC401991EC1900E05DA6 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4683BC3F1991EC1900E05DA6 /* Alamofire.swift */; };
 		46C2B2CB1990B8E400879DDD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C2B2CA1990B8E400879DDD /* AudioToolbox.framework */; };
 		46C2B2CD1990B8EC00879DDD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C2B2CC1990B8EC00879DDD /* CFNetwork.framework */; };
 		46C2B2CF1990B8F200879DDD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C2B2CE1990B8F200879DDD /* CoreGraphics.framework */; };
@@ -18,7 +19,6 @@
 		46C2B2D91990B91900879DDD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C2B2D81990B91900879DDD /* Security.framework */; };
 		46C2B2DB1990B92800879DDD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C2B2DA1990B92800879DDD /* StoreKit.framework */; };
 		46C2B2DD1990B93000879DDD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C2B2DC1990B93000879DDD /* SystemConfiguration.framework */; };
-		46C2B2DF1990B95800879DDD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C2B2DE1990B95800879DDD /* Parse.framework */; };
 		46D441E2199078DE00D49AC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D441E1199078DE00D49AC0 /* AppDelegate.swift */; };
 		46D441E4199078DE00D49AC0 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D441E3199078DE00D49AC0 /* MainMenuViewController.swift */; };
 		46D441E7199078DE00D49AC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46D441E5199078DE00D49AC0 /* Main.storyboard */; };
@@ -40,6 +40,7 @@
 /* Begin PBXFileReference section */
 		2E55846472394DE5B4743E48 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4655BEDC1990B564003D6682 /* ScanItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanItemViewController.swift; sourceTree = "<group>"; };
+		4683BC3F1991EC1900E05DA6 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		46C2B2C71990B7F600879DDD /* Circo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Circo-Bridging-Header.h"; sourceTree = "<group>"; };
 		46C2B2CA1990B8E400879DDD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		46C2B2CC1990B8EC00879DDD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -51,7 +52,6 @@
 		46C2B2D81990B91900879DDD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		46C2B2DA1990B92800879DDD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		46C2B2DC1990B93000879DDD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		46C2B2DE1990B95800879DDD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		46D441DC199078DE00D49AC0 /* Circo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46D441E0199078DE00D49AC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46D441E1199078DE00D49AC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +79,6 @@
 				46C2B2CF1990B8F200879DDD /* CoreGraphics.framework in Frameworks */,
 				46C2B2CD1990B8EC00879DDD /* CFNetwork.framework in Frameworks */,
 				46C2B2CB1990B8E400879DDD /* AudioToolbox.framework in Frameworks */,
-				46C2B2DF1990B95800879DDD /* Parse.framework in Frameworks */,
 				D443F96E8119459E9F74FE0C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +119,7 @@
 				46D441E1199078DE00D49AC0 /* AppDelegate.swift */,
 				46D441E3199078DE00D49AC0 /* MainMenuViewController.swift */,
 				4655BEDC1990B564003D6682 /* ScanItemViewController.swift */,
+				4683BC3F1991EC1900E05DA6 /* Alamofire.swift */,
 				46D441E5199078DE00D49AC0 /* Main.storyboard */,
 				46D441E8199078DE00D49AC0 /* Images.xcassets */,
 				46D441DF199078DE00D49AC0 /* Supporting Files */,
@@ -156,7 +156,6 @@
 		68956DE5ACB94CED8AC3B676 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				46C2B2DE1990B95800879DDD /* Parse.framework */,
 				46C2B2DC1990B93000879DDD /* SystemConfiguration.framework */,
 				46C2B2DA1990B92800879DDD /* StoreKit.framework */,
 				46C2B2D81990B91900879DDD /* Security.framework */,
@@ -308,6 +307,7 @@
 			files = (
 				46D441E4199078DE00D49AC0 /* MainMenuViewController.swift in Sources */,
 				46D441E2199078DE00D49AC0 /* AppDelegate.swift in Sources */,
+				4683BC401991EC1900E05DA6 /* Alamofire.swift in Sources */,
 				4655BEDD1990B564003D6682 /* ScanItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

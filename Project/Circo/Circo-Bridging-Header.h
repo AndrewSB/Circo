@@ -3,4 +3,4 @@
 //
 
 #import "ZBarSDK/ZBarSDK.h"
-#import "Parse/Parse.h"
+//#import "Parse/Parse.h"
